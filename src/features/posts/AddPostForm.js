@@ -33,31 +33,61 @@ const AddPostForm = () => {
 
   return (
     <section>
-      <h2>Add a New Post</h2>
+      <h1>Bulletin Board</h1>
+      <h2>New Post</h2>
       <form>
-        <label htmlFor="postTitle">Post Title:</label>
-        <input
-          type="text"
-          id="postTitle"
-          name="postTitle"
-          value={title}
-          onChange={onTitleChanged}
-        />
-        <label htmlFor="postContent">Content:</label>
-        <select id="postAuthor" value={userId} onChange={onAuthorChanged}>
-          <option value=""></option>
-          {usersOptions}
-        </select>
-        <textarea
-          id="postContent"
-          name="postContent"
-          value={content}
-          onChange={onContentChanged}
-        />
-        <button type="button" onClick={onSavePostClicked} disabled={!canSave}>
-          Save Post
-        </button>
+        <p>
+          <label htmlFor="postTitle">
+            <strong>Title</strong>
+          </label>
+        </p>
+        <p>
+          <input
+            type="text"
+            id="postTitle"
+            name="postTitle"
+            value={title}
+            onChange={onTitleChanged}
+          />
+        </p>
+        <p>
+          <label htmlFor="postContent">
+            <strong>Author</strong>
+          </label>
+        </p>
+        <p>
+          <select
+            id="postAuthor"
+            value={userId}
+            onChange={onAuthorChanged}
+            style={{ width: "100%" }}
+          >
+            <option value="" />
+            {usersOptions}
+          </select>
+        </p>
+        <p>
+          <label htmlFor="postContent">
+            <strong>Post</strong>
+          </label>
+        </p>
+        <p>
+          <textarea
+            id="postContent"
+            name="postContent"
+            value={content}
+            onChange={onContentChanged}
+          />
+        </p>
       </form>
+      <button
+        type="button"
+        className="save-button"
+        onClick={onSavePostClicked}
+        disabled={!canSave}
+      >
+        Add Post
+      </button>
     </section>
   );
 };

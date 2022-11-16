@@ -2,7 +2,10 @@ div {
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    
+}
+
+h1 {
+  font-size: 2em;
 }
 
 article {
@@ -21,7 +24,21 @@ input[type=text], textarea {
     box-sizing: border-box;
   }
 
-  button {
+  form {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 50%;
+  }
+
+  form p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .save-button {
     width: 100%;
     background-color: blueviolet;
     color: white;
@@ -32,6 +49,25 @@ input[type=text], textarea {
     cursor: pointer;
   }
 
-  button:disabled {
+  .save-button:hover {
+    background-color: rgb(162, 93, 226);
+  }
+
+  .save-button:disabled {
     background-color: grey;
+  }
+
+  .reaction-button {
+    background-color: blueviolet;
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .reaction-button:hover {
+    background-color: rgb(162, 93, 226);
   }
