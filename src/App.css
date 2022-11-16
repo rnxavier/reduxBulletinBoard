@@ -31,3 +31,7 @@ input[type=text], textarea {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  button:disabled {
+    background-color: grey;
+  }
